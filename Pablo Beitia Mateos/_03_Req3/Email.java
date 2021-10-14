@@ -1,9 +1,13 @@
+/* Clase Email que hereda de la clase Thread. Esta clase contiene la estructura completa del Email.
+ * @author PBeitia
+ */
 package _03_Req3;
 
 public class Email extends Thread{
-	private long id = 0;
+	private long id;
 	private String destinatario, remitente, asunto, cuerpo;
-
+	
+	//Getters and setters de cada parámetro.
 	public long getId() {
 		return id;
 	}
@@ -43,7 +47,8 @@ public class Email extends Thread{
 	public void setCuerpo(String cuerpo) {
 		this.cuerpo = cuerpo;
 	}
-
+	
+	//Método toString 
 	@Override
 	public String toString() {
 		return "Email [id=" + id + ", destinatario=" + destinatario + ", remitente=" + remitente + ", asunto=" + asunto

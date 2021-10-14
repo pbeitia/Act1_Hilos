@@ -1,5 +1,7 @@
+/**
+ * Esta clase main contiene 3 hilos productores y 2 hilos consumidores.
+ */
 package _03_Req3;
-
 
 public class Main {
 	public static void main(String[] args) {
@@ -20,4 +22,6 @@ public class Main {
 		c2.start();
 	}
 }
+
+
 

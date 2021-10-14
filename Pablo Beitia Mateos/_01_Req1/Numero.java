@@ -11,7 +11,9 @@ public class Numero implements Runnable {
 	
 	@Override
 	public void run() {
+		long tiempoprincipal = System.currentTimeMillis();
 		System.out.println("Arrancando hilo: " + Thread.currentThread().getName());
+		long tiempoFinal = System.currentTimeMillis();
 		Primo.comprobar(num,primo);
 	}
 }
