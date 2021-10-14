@@ -2,8 +2,16 @@ package actividad1_req1;
 
 import java.util.Scanner;
 
-public class Primos extends Thread {
+/**
+ * 
+ * @author cristiangarcialagar
+ * 
+ * Clase primos para calcular numeros primos que hereda de Thread para poder trabajar con hilos en multitarea.
+ *
+ */
 
+public class Primos extends Thread {
+	
 	private String nombre;
 	private long numero;
 	private boolean esPrimo;
@@ -12,13 +20,24 @@ public class Primos extends Thread {
 		super();
 		this.nombre = nombre;
 	}
-
+	
+	/**
+	 * Este metodo solicita un numero por pantalla
+	 * 
+	 * @return numero solicitado por pantalla 
+	 */
 	public long pedirNumero() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Solicita un número: ");
+		System.out.println("Introduce un número: ");
 		numero = sc.nextLong();
 		return numero;
 	}
+	
+	/**+
+	 *  Calcula si el numero propiedad del objeto es primo o no.
+	 *  
+	 * @return true si es primo y false si no lo es.
+	 */
 
 	public boolean obtenerPrimo() {
 
@@ -40,7 +59,10 @@ public class Primos extends Thread {
 		}
 	}
 
-	public synchronized void run() {
+	/**
+	 * 	Metodo run heredado de Thread que permite la ejecucion del hilo
+	 */
+	public void run() {
 		long tiempoInicio = System.currentTimeMillis();
 		esPrimo = obtenerPrimo();
 		long tiempoFinal = System.currentTimeMillis();
